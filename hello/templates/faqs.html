@@ -1,0 +1,560 @@
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finja Invest</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/css20.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    #stor-page .alikhan {
+        margin-top: 100px;
+    }
+    
+    #stor-page .alikhan h1 {
+        color: black;
+        font-size: 60px;
+        font-weight: 700;
+    }
+    
+    #stor-page .alikhan h1 spam {
+        color: red;
+        font-size: 60px;
+        font-weight: 700;
+    }
+    
+    #stor-page .alikhan1 {
+        width: 50%;
+    }
+    
+    #stor-page .alikhan1 img {
+        width: 85%;
+        margin-left: 50px;
+    }
+    
+    .question-tn {
+        border: none;
+        outline: none;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html"><img src="/static/images/43.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fa fa-navicon" id="khang"></i></span>
+          </button>
+            <div class="navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown" id="productDropdown">
+                        <a class="nav-link dropdown-toggle" onclick="window.location.href='product.html'" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Product
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item khan" href="@">Investment</a></li>
+                            <li><a class="dropdown-item" href="#pro8-page">RapidGrow</a></li>
+                            <li><a class="dropdown-item" href="#pro55-page">SecureGrow</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown" id="productDrop" onmouseover="openDropdown()" onmouseout="closeDropdown()">
+                        <a class="nav-link dropdown-toggle" onclick="window.location.href='portfolio.html'" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Portfolio
+                        </a>
+                        <ul class="dropdown-menu" id="dropdownMenu" onmouseover="keepDropdownOpen()" onmouseout="closeDropdown()">
+                            <li><a class="dropdown-item" href="fmcg.html">FMCG Supper Chain</a></li>
+                            <li><a class="dropdown-item" href="agriculture.html">Agriculture</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html">Our Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="security.html">Security</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="license.html">License</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shariah.html">Shariah</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="faqs.html">FAQs</a>
+                    </li>
+
+                    <div class="text-end">
+                        {% if user.is_authenticated %}
+                        <a href="logout.html"><button type="button" class="btn btn-warning">Logout</button></a> {% else %}
+                        <a href="login.html"><button type="button" class="btn btn-warning me-2">Login</button></a>
+                        <a href="signin.html"><button type="button" class="btn btn-warning">Sign-up</button></a> {% endif %}
+                    </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="stor-page" class="section-p1">
+        <div class="stor1-page alikhan">
+            <h1>Frequently <br>
+                <spam> Asked Questions</spam>
+            </h1>
+        </div>
+        <div class="stor2-page alikhan1">
+            <img src="/static/images/106.png">
+        </div>
+    </div>
+
+    <div id="faqs-page" class="section-p2">
+        <div class="faqs1-page">
+            <i class="fa fa-comments"></i>
+            <h3>GENERAL</h3>
+        </div>
+        <div class="faqs2-page">
+            <i class="fa fa-handshake-o"></i>
+            <h3>INVESTOR</h3>
+        </div>
+        <div class="faqs3-page">
+            <i class="fa fa-american-sign-language-interpreting"></i>
+            <h3>BORROWERS</h3>
+        </div>
+        <div class="faqs4-page">
+            <i class="	fa fa-moon-o"></i>
+            <h3>ISLAMIC FINANCE</h3>
+        </div>
+    </div>
+
+    <div id="faqs5-page" class="section-p2 questions">
+        <h1>General FAQs</h1>
+        <div class="question">
+            <div class="faqs7-page">
+                <li>What is Peer-to-peer financing?</li>
+                <button class="question-tn">
+                <span class="show-text plus-icons"><i class="fa fa-plus"></i></span>
+                <span class="show-text minus-icons"><i class="fa fa-minus-square-o"></i></span>
+            </button>
+            </div>
+            <div class="show-text question-text">
+                <h5>Peer-to-peer financing is a direct form of financing individuals or businesses without the involvement of a middleman- like banks or other traditional financial institutions. The P2P process is simple. Through an online platform, you can
+                    finance as many eligible borrowers as you want, depending on your risk appetite.</h5>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="faqs7-page">
+                <li>
+                    What is Finja Invest?</li>
+                <button class="question-tn">
+                <span class="show-text plus-icons"><i class="fa fa-plus"></i></span>
+                <span class="show-text minus-icons"><i class="fa fa-minus-square-o"></i></span>
+            </button>
+            </div>
+            <div class="show-text question-text">
+                <h5>Finja Invest is Pakistan's first peer-to-peer Digital Financing Platform, licensed & regulated by SECP. We connect the new-age investors to the creditworthy local karyana Stores in need of stock financing. In return, we offer up to 36%
+                    annual returns to the investors & easy short-term financing for stock purchases to the borrowers.</h5>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="faqs7-page">
+                <li>
+                    Who can invest in Finja Invest?</li>
+                <button class="question-tn">
+                <span class="show-text plus-icons"><i class="fa fa-plus"></i></span>
+                <span class="show-text minus-icons"><i class="fa fa-minus-square-o"></i></span>
+            </button>
+            </div>
+            <div class="show-text question-text">
+                <h5>Any Pakistani institute or an individual with a net worth of at least PKR 15 million who wants to maximize their investments and earn promising returns.</h5>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="faqs7-page">
+                <li>
+                    How does Finja Invest manage risk?</li>
+                <button class="question-tn">
+                <span class="show-text plus-icons"><i class="fa fa-plus"></i></span>
+                <span class="show-text minus-icons"><i class="fa fa-minus-square-o"></i></span>
+            </button>
+            </div>
+            <div class="show-text question-text">
+                <h5>As with any financing program, there are some risks involved in P2P financing as well, such as the borrower doesn't repay on time. At Finja Invest, we keep the risk to a minimum by ensuring that every borrower in our portfolio is identity-checked,
+                    credit-checked, and risk-assessed as per best industry standards and have an immaculate and transparent track record to the best of our record.</h5>
+            </div>
+        </div>
+
+
+        <div class="question">
+            <div class="faqs7-page">
+                <li>
+
+                    Is Finja Invest operating legally in Pakistan?</li>
+                <button class="question-tn">
+                <span class="show-text plus-icons"><i class="fa fa-plus"></i></span>
+                <span class="show-text minus-icons"><i class="fa fa-minus-square-o"></i></span>
+            </button>
+            </div>
+            <div class="show-text question-text">
+                <h5>Finja Invest is licensed and regulated by the Security Exchange Commission of Pakistan (SECP) to operate as Pakistan’s first and only P2P financing platform. Finja shares fortnightly stats (investment information) with SECP in an effort
+                    for complete transparency.</h5>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="faqs7-page">
+                <li>
+
+                    Is it safe to invest with Finja Invest?</li>
+                <button class="question-tn">
+                <span class="show-text plus-icons"><i class="fa fa-plus"></i></span>
+                <span class="show-text minus-icons"><i class="fa fa-minus-square-o"></i></span>
+            </button>
+            </div>
+            <div class="show-text question-text">
+                <h5>Investing in peer-to-peer (P2P) financing is a great way to boost yields and diversify your investment opportunities. P2P financing is an alternative asset that offers attractive, absolute, and risk-adjusted returns, even in today's low-interest-rate
+                    environment. However, similar to all types of investments, this too carries certain risks, mostly related to delayed repayments of investments, but we have secured this by rigorous verification of our portfolio and capital protection
+                    guarantee in all of our investment models except RapidGrow.</h5>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="faqs7-page">
+                <li>
+                    How is Finja Invest different from other investment options?</li>
+                <button class="question-tn">
+                <span class="show-text plus-icons"><i class="fa fa-plus"></i></span>
+                <span class="show-text minus-icons"><i class="fa fa-minus-square-o"></i></span>
+            </button>
+            </div>
+            <div class="show-text question-text">
+                <h5>Finja Invest is a peer-to-peer financing platform for creditworthy borrowers and fixed-income investors to get a better deal. Part of the attraction is that it can provide better rates and returns without the infrastructure cost and complexity
+                    of a traditional bank or deposit-taking institution. This is briefly explained in Comp-scan (Link to the comparison) with other such investment opportunities available in the country.</h5>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="faqs7-page">
+                <li>
+                    What is premature encashment?</li>
+                <button class="question-tn">
+                <span class="show-text plus-icons"><i class="fa fa-plus"></i></span>
+                <span class="show-text minus-icons"><i class="fa fa-minus-square-o"></i></span>
+            </button>
+            </div>
+            <div class="show-text question-text">
+                <h5>Finja Invest allows investors who, under any unforeseen circumstances, want to encash the invested amount before the maturity date to liquidate their investments with a minimum discount.</h5>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="faqs7-page">
+                <li>
+                    What if Finja Invest goes out of business?</li>
+                <button class="question-tn">
+                <span class="show-text plus-icons"><i class="fa fa-plus"></i></span>
+                <span class="show-text minus-icons"><i class="fa fa-minus-square-o"></i></span>
+            </button>
+            </div>
+            <div class="show-text question-text">
+                <h5>The investments made in Finja Invest are secure and will be repaid to the investors if, under any unforeseen circumstances, Finja Invest shuts down its operations.</h5>
+            </div>
+        </div>
+
+
+        <div class="question">
+            <div class="faqs7-page">
+                <li>
+                    What is diversification?</li>
+                <button class="question-tn">
+                <span class="show-text plus-icons"><i class="fa fa-plus"></i></span>
+                <span class="show-text minus-icons"><i class="fa fa-minus-square-o"></i></span>
+            </button>
+            </div>
+            <div class="show-text question-text">
+                <h5>Diversification is a risk management strategy that involves spreading your money across a wide variety of investments within a portfolio. The rationale is that a portfolio constructed of different kinds of assets will, on average, yield
+                    higher long-term returns and lower the risk of any individual asset.</h5>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="faqs7-page">
+                <li>
+                    What is RapidGrow?</li>
+                <button class="question-tn">
+                <span class="show-text plus-icons"><i class="fa fa-plus"></i></span>
+                <span class="show-text minus-icons"><i class="fa fa-minus-square-o"></i></span>
+            </button>
+            </div>
+            <div class="show-text question-text">
+                <h5>RapidGrow is a short-term investment model offered by Finja Invest, which allows investors to invest their capital in Finja Invest’s portfolio and earn up to 36% annual returns with monthly payouts. The investor shares the risk with Finja
+                    Invest, and Finja Invest does not offer capital protection for this investment model.</h5>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="faqs7-page">
+                <li>
+                    What is SecureGrow?</li>
+                <button class="question-tn">
+                <span class="show-text plus-icons"><i class="fa fa-plus"></i></span>
+                <span class="show-text minus-icons"><i class="fa fa-minus-square-o"></i></span>
+            </button>
+            </div>
+            <div class="show-text question-text">
+                <h5>SecureGrow is a long-term investment model offered by Finja Invest, which allows investors to invest their capital in Finja Invest’s portfolio and earn up to 26% annual returns with complete capital protection. The investors have the option
+                    to choose from multiple tenures of their choice.</h5>
+            </div>
+        </div>
+
+
+        <div class="question">
+            <div class="faqs7-page">
+                <li>
+                    What is the difference between RapidGrow & SecureGrow?</li>
+                <button class="question-tn">
+                <span class="show-text plus-icons"><i class="fa fa-plus"></i></span>
+                <span class="show-text minus-icons"><i class="fa fa-minus-square-o"></i></span>
+            </button>
+            </div>
+            <div class="show-text question-text">
+                <h5>RapidGrow is a short-term investment model with monthly payouts, the investor shares the risks with Finja Invest, and the capital is not protected in this investment model. SecureGrow is a long-term investment model with different payout
+                    options, it is a no-risk investment model that offers capital protection to the investors.</h5>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="faqs7-page">
+                <li>
+                    What is Invoice Discounting?</li>
+                <button class="question-tn">
+                <span class="show-text plus-icons"><i class="fa fa-plus"></i></span>
+                <span class="show-text minus-icons"><i class="fa fa-minus-square-o"></i></span>
+            </button>
+            </div>
+            <div class="show-text question-text">
+                <h5>Invoice Financing, also known as Invoice Factoring, is a financial solution that helps businesses improve their cash flow by unlocking the value of their unpaid invoices. It's particularly useful for businesses facing delayed payments
+                    from clients or customers.</h5>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="faqs7-page">
+                <li>
+                    What is Peer-to-peer financing?</li>
+                <button class="question-tn">
+                <span class="show-text plus-icons"><i class="fa fa-plus"></i></span>
+                <span class="show-text minus-icons"><i class="fa fa-minus-square-o"></i></span>
+            </button>
+            </div>
+            <div class="show-text question-text">
+                <h5>Peer-to-peer financing is a direct form of financing individuals or businesses without the involvement of a middleman- like banks or other traditional financial institutions. The P2P process is simple. Through an online platform, you can
+                    finance as many eligible borrowers as you want, depending on your risk appetite.</h5>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <div id="home42-page" class="section-p6">
+        <div class="home43-page">
+            <h1>Want To Stay Informed?
+            </h1>
+        </div>
+        <div class="home44-page">
+            <form action="home.html" method="post">
+                {% csrf_token %}
+                <input type="text" id="email" name="email" placeholder="Enter Your Email Address">
+                <button type="submit" value="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="home40-page" class="section-p3">
+        <div class="home44-page">
+            <div class="home41-page">
+                <img src="/static/images/43.png">
+            </div>
+            <div class="home42-page">
+                <h5>Follow Us:</h5>
+                <div class="home43-page">
+                    <i class=" fa fa-instagram"></i>
+                    <i class=" fa fa-facebook-official"></i>
+                    <i class=" fa fa-twitter-square"></i>
+                    <i class=" fa fa-youtube-play"></i>
+                    <i class=" fa fa-linkedin-square"></i>
+                    <i class=" fa fa-whatsapp"></i>
+
+                </div>
+            </div>
+        </div>
+        <div class="home45-page">
+            <li><a href="">Home</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">Our Story</a></li>
+        </div>
+        <div class="home45-page">
+            <li><a href="">Security
+            </a></li>
+            <li><a href="">License</a></li>
+            <li><a href="">Shariah</a></li>
+        </div>
+        <div class="home46-page">
+            <h3>Products</h3>
+            <li><a href="">RapidGrow</a></li>
+            <li><a href="">SecureGrow</a></li>
+        </div>
+        <div class="home46-page">
+            <h3>Resources</h3>
+            <li><a href="">FAQs</a></li>
+            <li><a href="">T&Cs</a></li>
+        </div>
+
+    </div>
+    <div id="home47-page">
+        <h5>© 2024-2027 Finja Lending Services. All Rights Reserved.</h5>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12">
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the dropdown element
+            var productDropdown = document.getElementById("productDropdown");
+
+            // Add an event listener for mouseover to open the dropdown
+            productDropdown.addEventListener("mouseover", function() {
+                // Check if the dropdown is not already open
+                if (!productDropdown.classList.contains("show")) {
+                    // Use Bootstrap's dropdown method to manually show the dropdown
+                    var dropdown = new bootstrap.Dropdown(productDropdown);
+                    dropdown.show();
+                }
+            });
+
+            // Add an event listener for mouseout to close the dropdown
+            productDropdown.addEventListener("mouseout", function() {
+                // Use Bootstrap's dropdown method to manually hide the dropdown
+                var dropdown = new bootstrap.Dropdown(productDropdown);
+                dropdown.hide();
+            });
+        });
+    </script>
+
+    <script>
+        var dropdownMenu = document.getElementById("dropdownMenu");
+
+        function openDropdown() {
+            dropdownMenu.classList.add("show");
+        }
+
+        function keepDropdownOpen() {
+            clearTimeout(dropdownTimer);
+        }
+
+        function closeDropdown() {
+            dropdownTimer = setTimeout(function() {
+                dropdownMenu.classList.remove("show");
+            }, 1000);
+        }
+    </script>
+
+    <script>
+        const questions = document.querySelectorAll(".question");
+        questions.forEach((question) => {
+            const btn = question.querySelector(".question-tn");
+            btn.addEventListener("click", () => {
+                question.classList.toggle("show-text");
+            })
+        })
+    </script>
+
+
+
+</body>
+
+</html>

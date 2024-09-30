@@ -1,0 +1,348 @@
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finja Invest</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/css12.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html"><img src="/static/images/43.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fa fa-navicon" id="khang"></i></span>
+          </button>
+            <div class="navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown" id="productDropdown">
+                        <a class="nav-link dropdown-toggle" onclick="window.location.href='product.html'" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Product
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item khan" href="@">Investment</a></li>
+                            <li><a class="dropdown-item" href="#pro8-page">RapidGrow</a></li>
+                            <li><a class="dropdown-item" href="#pro55-page">SecureGrow</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown" id="productDrop" onmouseover="openDropdown()" onmouseout="closeDropdown()">
+                        <a class="nav-link dropdown-toggle active" onclick="window.location.href='portfolio.html'" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Portfolio
+                        </a>
+                        <ul class="dropdown-menu" id="dropdownMenu" onmouseover="keepDropdownOpen()" onmouseout="closeDropdown()">
+                            <li><a class="dropdown-item" href="fmcg.html">FMCG Supper Chain</a></li>
+                            <li><a class="dropdown-item" href="agriculture.html">Agriculture</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html">Our Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="security.html">Security</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="license.html">License</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shariah.html">Shariah</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faqs.html">FAQs</a>
+                    </li>
+
+                    <div class="text-end">
+                        {% if user.is_authenticated %}
+                        <a href="logout.html"><button type="button" class="btn btn-warning">Logout</button></a> {% else %}
+                        <a href="login.html"><button type="button" class="btn btn-warning me-2">Login</button></a>
+                        <a href="signin.html"><button type="button" class="btn btn-warning">Sign-up</button></a> {% endif %}
+                    </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="port-page">
+        <div class="port1-page">
+            <h1>Learn About <br>Where
+                <spam><br>We invest Your <br> Capital!</h1>
+        </div>
+        <div class="port2-page">
+            <img src="/static/images/66.png">
+        </div>
+    </div>
+
+    <div id="port3-page" class="section-p2">
+        <h1>Who
+            <spam>are We?</spam>
+        </h1>
+        <p>Finja Invest is at the forefront of transforming businesses through purpose-driven financing solutions. Our investment portfolio extends across diverse industries, including the essential supply chains of Fast-Moving Consumer Goods (FMCG), Agriculture,
+            and Logistics. Additionally, for institutional or individual borrowers outside of the supply chain ecosystem, Finja also provides finances against Gold. With a closed-loop and purpose-built financing model, Finja Invest empowers businesses
+            to attain unparalleled financial stability. Our commitment lies in strategically supporting these vital sectors, enabling them to thrive and contribute to the nation's economic growth. Through tailored investment strategies, we facilitate
+            sustainable growth and foster a brighter future for businesses within these dynamic industries.</p>
+        <a href="#"><button>Invest Now</button></a>
+    </div>
+
+    <div id="port7-page" class="section-p5">
+        <div class="port8-page">
+            <img src="/static/images/68.png">
+        </div>
+        <div class="port9-page">
+            <h1>Agriculture Supply Chain</h1>
+            <p>Finja demonstrates its unwavering commitment to enhancing the Agriculture supply chain by extending invaluable support to distributors and manufacturers. Our innovative approach involves providing comprehensive invoice discounting solutions
+                specifically designed for Distributors and Wholesalers. This strategic financial support ensures these vital players in the agricultural ecosystem have convenient and swift access to funds. These funds are earmarked for securing essential
+                agricultural supplies, thereby facilitating the uninterrupted flow of agricultural activities.</p>
+            <a href=""><button>Read More</button></a>
+        </div>
+    </div>
+
+    <div id="port4-page" class="section-p3">
+        <div class="port5-page">
+            <h1>FMCG Supply Chain</h1>
+            <p>Finja Invest maintains a core focus on the Fast Moving Consumer Goods (FMCG) supply chain industry, where our closed-loop financing solutions play a pivotal role. Our digital credit offerings empower retailers with the means to purchase stock,
+                fueling their growth and operational agility efficiently. In addition, we offer invoice discounting solutions tailored for distributors and wholesalers, enabling them to optimize cash flow by leveraging their stock purchases.</p>
+            <a href=""><button>Read More</button></a>
+        </div>
+        <div class="port6-page">
+            <img src="/static/images/67.png">
+        </div>
+    </div>
+
+    <div id="port7-page" class="section-p5">
+        <div class="port8-page">
+            <img src="/static/images/70.png">
+        </div>
+        <div class="port9-page">
+            <h1>Gold-Backed Financing</h1>
+            <p>Beyond the supply chain ecosystems, Finja, in partnership with Goldfin, extends its financial support to institutional or individual borrowers through a unique avenue: financing against gold. This innovative offering provides borrowers with
+                an opportunity to leverage their gold assets to secure the funds they need to drive business growth. Additionally, investors have the option to participate in this portfolio, allowing them to diversify their investment strategy. Borrowers
+                benefit by utilizing the acquired funds to expand their ventures while simultaneously honoring their financial commitments by returning the capital along with the accrued returns to the investors. Once the obligation is met, borrowers
+                regain ownership of their gold, completing a seamless and mutually beneficial transaction.</p>
+        </div>
+    </div>
+
+    <div id="port4-page" class="section-p3">
+        <div class="port5-page">
+            <h1>Logistics Supply Chain</h1>
+            <p>Finja showcases its unwavering dedication to fortifying the logistics supply chain by offering invaluable assistance to logistics service providers and transportation companies. Our progressive strategy entails delivering comprehensive invoice
+                financing solutions tailored explicitly for the logistics sector. This strategic financial backing guarantees that these essential participants in the logistics network enjoy convenient and prompt access to capital.</p>
+        </div>
+        <div class="port6-page">
+            <img src="/static/images/69.png">
+        </div>
+    </div>
+
+    <div id="port7-page" class="section-p5">
+        <div class="port8-page">
+            <img src="/static/images/72.png">
+        </div>
+        <div class="port9-page">
+            <h1>Telecommunications Franchises & Retail Financing</h1>
+            <p>Finja in partnership with some major players in the telecommunications industry plans on expanding it’s investment portfolio in the telco industry through tailored financial solutions for the businesses involved in the segment.</p>
+        </div>
+    </div>
+
+    <div id="port4-page" class="section-p3">
+        <div class="port5-page">
+            <h1>Industrial Engineering Supply Chain</h1>
+            <p>Finja exemplifies its steadfast dedication to strengthening the industrial engineering supply chain by offering invaluable support to manufacturers and suppliers. Our innovative approach encompasses providing comprehensive invoice discounting
+                solutions tailored specifically for industrial engineering distributors and producers.</p>
+        </div>
+        <div class="port6-page">
+            <img src="/static/images/71.png">
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="home42-page" class="section-p6">
+        <div class="home43-page">
+            <h1>Want To Stay Informed?
+            </h1>
+        </div>
+        <div class="home44-page">
+            <form action="home.html" method="post">
+                {% csrf_token %}
+                <input type="text" id="email" name="email" placeholder="Enter Your Email Address">
+                <button type="submit" value="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="home40-page" class="section-p3">
+        <div class="home44-page">
+            <div class="home41-page">
+                <img src="/static/images/43.png">
+            </div>
+            <div class="home42-page">
+                <h5>Follow Us:</h5>
+                <div class="home43-page">
+                    <i class=" fa fa-instagram"></i>
+                    <i class=" fa fa-facebook-official"></i>
+                    <i class=" fa fa-twitter-square"></i>
+                    <i class=" fa fa-youtube-play"></i>
+                    <i class=" fa fa-linkedin-square"></i>
+                    <i class=" fa fa-whatsapp"></i>
+
+                </div>
+            </div>
+        </div>
+        <div class="home45-page">
+            <li><a href="">Home</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">Our Story</a></li>
+        </div>
+        <div class="home45-page">
+            <li><a href="">Security
+            </a></li>
+            <li><a href="">License</a></li>
+            <li><a href="">Shariah</a></li>
+        </div>
+        <div class="home46-page">
+            <h3>Products</h3>
+            <li><a href="">RapidGrow</a></li>
+            <li><a href="">SecureGrow</a></li>
+        </div>
+        <div class="home46-page">
+            <h3>Resources</h3>
+            <li><a href="">FAQs</a></li>
+            <li><a href="">T&Cs</a></li>
+        </div>
+
+    </div>
+    <div id="home47-page">
+        <h5>© 2024-2027 Finja Lending Services. All Rights Reserved.</h5>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12">
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the dropdown element
+            var productDropdown = document.getElementById("productDropdown");
+
+            // Add an event listener for mouseover to open the dropdown
+            productDropdown.addEventListener("mouseover", function() {
+                // Check if the dropdown is not already open
+                if (!productDropdown.classList.contains("show")) {
+                    // Use Bootstrap's dropdown method to manually show the dropdown
+                    var dropdown = new bootstrap.Dropdown(productDropdown);
+                    dropdown.show();
+                }
+            });
+
+            // Add an event listener for mouseout to close the dropdown
+            productDropdown.addEventListener("mouseout", function() {
+                // Use Bootstrap's dropdown method to manually hide the dropdown
+                var dropdown = new bootstrap.Dropdown(productDropdown);
+                dropdown.hide();
+            });
+        });
+    </script>
+
+    <script>
+        var dropdownMenu = document.getElementById("dropdownMenu");
+
+        function openDropdown() {
+            dropdownMenu.classList.add("show");
+        }
+
+        function keepDropdownOpen() {
+            clearTimeout(dropdownTimer);
+        }
+
+        function closeDropdown() {
+            dropdownTimer = setTimeout(function() {
+                dropdownMenu.classList.remove("show");
+            }, 1000);
+        }
+    </script>
+
+
+</body>
+
+</html>

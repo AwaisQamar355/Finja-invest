@@ -1,0 +1,192 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.section-p1 {
+    padding: 120px 120px;
+}
+
+.section-p2 {
+    padding: 100px 120px;
+}
+
+.section-p1 {
+    padding: 80px 120px;
+}
+
+.section-p1 {
+    padding: 60px 120px;
+}
+
+.section-p1 {
+    padding: 20px 120px;
+}
+
+:root {
+    --primary-color: white;
+    --secondary-color: black;
+}
+
+.dark-them {
+    --primary-color: black;
+    --secondary-color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+    background-color: rgb(243, 243, 243);
+    position: sticky;
+    top: 0px;
+    left: 0px;
+}
+
+.navbar .navbar-nav {
+    padding: 10px 0px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    color: rgb(129, 128, 128);
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    padding: 6px 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar .container-fluid .navbar-brand {
+    color: black;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.navbar .navbar-nav .nav-item .active {
+    color: orangered;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover,
+.navbar .navbar-nav .nav-item .nav-link .active {
+    color: orangered;
+}
+
+.navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+    color: rgb(134, 133, 133);
+    font-size: 15px;
+    font-weight: 200;
+    font-family: 'Times New Roman', Times, serif;
+    border: none;
+}
+
+.navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover {
+    color: orangered;
+}
+
+.navbar .navbar-nav .nav-item .dropdown-menu .khan {
+    color: rgb(15, 15, 15);
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar .navbar-nav .nav-item .dropdown-menu .khan:hover {
+    color: rgb(15, 15, 15);
+}
+
+#home-page {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 150px 130px 0px 130px;
+}
+
+#home-page .home1-page {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#home-page .home1-page h3 {
+    color: black;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 80px;
+}
+
+#home-page .home1-page h3 span {
+    color: red;
+    font-size: 150px;
+    font-weight: 900;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#home-page .home1-page h4 {
+    color: rgb(128, 125, 125);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+#home-page .home1-page button {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 10px 20px;
+    margin-top: 15px;
+}
+
+#home-page .home1-page button:hover {
+    background-color: red;
+}
+
+#home-page .home1-page .home3-page {
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#bhome-page .home1-page .home3-page .home4-page .khan2 {
+    background-color: rgb(95, 253, 200);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#home-page .home1-page .home3-page .home4-page .khan3 {
+    background-color: rgb(127, 213, 235);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#home-page .home1-page .home3-page .home4-page .khan4 {
+    background-color: rgb(214, 214, 4);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#home-page .home1-page .home3-page .home4-page h6 {
+    color: rgb(134, 132, 132);
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 7px;
+}
+
+#home-page .home2-apge {
+    width: 100%;
+}
+
+#home-page .home2-apge img {
+    width: 80%;
+    margin-left: 180px;
+}

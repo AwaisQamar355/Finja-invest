@@ -1,0 +1,478 @@
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finja Invest</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/css11.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html"><img src="/static/images/43.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fa fa-navicon" id="khang"></i></span>
+          </button>
+            <div class="navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown" id="productDropdown">
+                        <a class="nav-link dropdown-toggle active" onclick="window.location.href='product.html'" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Product
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item khan" href="@">Investment</a></li>
+                            <li><a class="dropdown-item" href="#pro8-page">RapidGrow</a></li>
+                            <li><a class="dropdown-item" href="#pro55-page">SecureGrow</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown" id="productDrop" onmouseover="openDropdown()" onmouseout="closeDropdown()">
+                        <a class="nav-link dropdown-toggle" onclick="window.location.href='portfolio.html'" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Portfolio
+                        </a>
+                        <ul class="dropdown-menu" id="dropdownMenu" onmouseover="keepDropdownOpen()" onmouseout="closeDropdown()">
+                            <li><a class="dropdown-item" href="fmcg.html">FMCG Supper Chain</a></li>
+                            <li><a class="dropdown-item" href="agriculture.html">Agriculture</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html">Our Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="security.html">Security</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="license.html">License</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shariah.html">Shariah</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faqs.html">FAQs</a>
+                    </li>
+
+                    <div class="text-end">
+                        {% if user.is_authenticated %}
+                        <a href="logout.html"><button type="button" class="btn btn-warning">Logout</button></a> {% else %}
+                        <a href="login.html"><button type="button" class="btn btn-warning me-2">Login</button></a>
+                        <a href="signin.html"><button type="button" class="btn btn-warning">Sign-up</button></a> {% endif %}
+                    </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="pro-page">
+        <div class="pro1-page">
+            <h1>Unlock <br> The
+                <spam>New Ways <br>To Invest</spam>
+                <br>In Pakistan</h1>
+            <p>Learn about our products and how <br>peer-to-peer financing works</p>
+            <a href=""><button>Learn More</button></a>
+        </div>
+        <div class="pro2-page">
+            <img src="/static/images/44.png">
+        </div>
+    </div>
+
+    <div id="pro3-page" class="section-p2">
+        <div class="pro4-page">
+            <img src="/static/images/45.png">
+        </div>
+        <div class="pro5-page">
+            <h2>What Is
+                <spam>P2P Financing</spam>
+            </h2>
+            <h6>Peer-to-Peer financing, also known as crowd-funding, is a revolutionary financial model that facilitates direct borrowing and lending between individuals or businesses through an online platform without the involvement of intermediaries and
+                incumbents.
+            </h6>
+        </div>
+    </div>
+
+
+    <div id="pro6-page" class="section-p5">
+        <div class="pro7-page">
+            <img src="/static/images/46.png">
+            <h2>Who Are The Investors?
+            </h2>
+            <p>In peer-to-peer financing, any institution or individual who wants to maximize their gains can be an investor.
+
+            </p>
+            <a href=""><button> Ready to Invest? </button></a>
+        </div>
+        <div class="pro7-page">
+            <img src="/static/images/47.png">
+            <h2>Who Are The Borrowers?
+
+            </h2>
+            <p>Generally, any individual or business looking for financing can be a potential borrower in peer-to-peer financing.
+
+
+            </p>
+            <a href=""><button> Apply for Financing now! </button></a>
+        </div>
+    </div>
+
+    <div id="pro8-page" class="section-p1">
+        <h1>What is
+            <spam>RapidGrow</spam> & How it Works?
+        </h1>
+        <p>Experience the power of growth with RapidGrow. Earn monthly returns that provide you with a steady stream of income, all within a short timeframe. Ideal for those seeking consistent gains and looking to achieve their financial goals quickly. Take
+            charge of your financial future.</p>
+        <div class="pro9-page">
+            <div class="pro10-page">
+                <img src="/static/images/48.png">
+                <h3>Step 1
+                </h3>
+                <p>Investors add their capital to the Finja Invest account
+
+                </p>
+            </div>
+            <div class="pro10-page">
+                <img src="/static/images/49.png">
+                <h3>Step 2
+                </h3>
+                <p>Finja Invest we the capital in multiple borrowers seeking financing for 30 days
+
+                </p>
+            </div>
+            <div class="pro10-page">
+                <img src="/static/images/50.png">
+                <h3>Step 3
+                </h3>
+                <p>The Borrower utilizes the funds to grow their business
+
+                </p>
+            </div>
+            <div class="pro10-page">
+                <img src="/static/images/51.png">
+                <h3>Step 4
+                </h3>
+                <p>The borrower returns the capital along with the profit at the end of investment term
+
+                </p>
+            </div>
+            <div class="pro10-page">
+                <img src="/static/images/52.png">
+                <h3>Step 5
+                </h3>
+                <p>The capital along with profit is disbursed to the investors account after the maturity
+
+                </p>
+            </div>
+            <div class="pro10-page">
+                <img src="/static/images/53.png">
+                <h3>Step 6
+                </h3>
+                <p>Investor can choose to reinvest or withdraw their funds
+
+                </p>
+            </div>
+        </div>
+        <a href=""><button>Invest Now</button></a>
+    </div>
+
+
+    <div id="pro8-page" class="section-p1">
+        <h1 id="pro55-page">What is
+            <spam>SecureGrow</spam> & How it Works?
+        </h1>
+        <p>Embrace flexibility and security with SecureGrow, our fixed investment product designed to suit your unique needs. Enjoy the freedom to choose from Monthly, quarterly, half-yearly, and annual payout options, all while benefiting from the safety
+            of fixed returns. For those who prefer a diverse and less frequent payout structure, SecureGrow is the ideal solution. Build a resilient investment portfolio.</p>
+        <div class="pro9-page">
+            <div class="pro10-page">
+                <img src="/static/images/54.png" class="product">
+                <h3>Step 1
+                </h3>
+                <p>Investors add their capital to Finja Invest account
+
+                </p>
+            </div>
+            <div class="pro10-page">
+                <img class="product" src="/static/images/55.png">
+                <h3>Step 2
+                </h3>
+                <p>We invest the capital in multiple borrowers seeking long-term financing
+
+                </p>
+            </div>
+            <div class="pro10-page">
+                <img class="product" src="/static/images/56.png">
+                <h3>Step 3
+                </h3>
+                <p>The Borrower utilizes the funds to grow their business
+
+                </p>
+            </div>
+            <div class="pro10-page">
+                <img class="product" src="/static/images/57.png">
+                <h3>Step 4
+                </h3>
+                <p>The borrower returns the capital along with the profit at the end of investment term
+
+                </p>
+            </div>
+            <div class="pro10-page">
+                <img class="product" src="/static/images/58.png">
+                <h3>Step 5
+                </h3>
+                <p>The capital along with profit is disbursed to the investors account after the maturity
+
+                </p>
+            </div>
+            <div class="pro10-page">
+                <img class="product" src="/static/images/59.png">
+                <h3>Step 6
+                </h3>
+                <p>Investor can choose to reinvest or withdraw their funds
+
+                </p>
+            </div>
+        </div>
+        <a href=""><button>Invest Now</button></a>
+    </div>
+
+    <div id="pro11-page" class="section-p4">
+        <h1>You Might
+            <spam>Want To Know</spam>
+        </h1>
+        <div class="pro12-page">
+            <div class="pro13-page">
+                <div class="pro14-page">
+                    <img src="/static/images/60.png">
+                    <h3>Return Rates</h3>
+                </div>
+                <p>P2P financing can provide higher returns than savings and other investments. It’s a great way to diversify your portfolio.
+
+                </p>
+            </div>
+            <div class="pro13-page">
+                <div class="pro14-page">
+                    <img src="/static/images/61.png">
+                    <h3>Return of Capital</h3>
+                </div>
+                <p>Finja Invest collects borrower’s repayments and passes them on to investors at set intervals.
+
+                </p>
+            </div>
+            <div class="pro13-page">
+                <div class="pro14-page">
+                    <img src="/static/images/62.png">
+                    <h3>Financing Risk Rates</h3>
+                </div>
+                <p>Whenever a borrower applies for financing, it is mandatory for all financing platforms to practice a vigorous.
+
+                </p>
+            </div>
+            <div class="pro13-page">
+                <div class="pro14-page">
+                    <img src="/static/images/63.png">
+                    <h3>Privacy</h3>
+                </div>
+                <p>The platform operator looks after the privacy of user information.
+
+                </p>
+            </div>
+            <div class="pro13-page">
+                <div class="pro14-page">
+                    <img src="/static/images/64.png">
+                    <h3>Laws & Regulations</h3>
+                </div>
+                <p>Finja Invest is licensed and regulated by the Securities and Exchange Commission of Pakistan.</p>
+            </div>
+            <div class="pro13-page">
+                <div class="pro14-page">
+                    <img src="/static/images/65.png">
+                    <h3>Better Investment Asset</h3>
+                </div>
+                <p>Based on a simple idea of financing, Peer-to-peer financing platforms use cutting-edge technology to connect borrowers.</p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div id="home42-page" class="section-p6">
+        <div class="home43-page">
+            <h1>Want To Stay Informed?
+            </h1>
+        </div>
+        <div class="home44-page">
+            <form action="home.html" method="post">
+                {% csrf_token %}
+                <input type="text" id="email" name="email" placeholder="Enter Your Email Address">
+                <button type="submit" value="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="home40-page" class="section-p3">
+        <div class="home44-page">
+            <div class="home41-page">
+                <img src="/static/images/43.png">
+            </div>
+            <div class="home42-page">
+                <h5>Follow Us:</h5>
+                <div class="home43-page">
+                    <i class=" fa fa-instagram"></i>
+                    <i class=" fa fa-facebook-official"></i>
+                    <i class=" fa fa-twitter-square"></i>
+                    <i class=" fa fa-youtube-play"></i>
+                    <i class=" fa fa-linkedin-square"></i>
+                    <i class=" fa fa-whatsapp"></i>
+
+                </div>
+            </div>
+        </div>
+        <div class="home45-page">
+            <li><a href="">Home</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">Our Story</a></li>
+        </div>
+        <div class="home45-page">
+            <li><a href="">Security
+            </a></li>
+            <li><a href="">License</a></li>
+            <li><a href="">Shariah</a></li>
+        </div>
+        <div class="home46-page">
+            <h3>Products</h3>
+            <li><a href="">RapidGrow</a></li>
+            <li><a href="">SecureGrow</a></li>
+        </div>
+        <div class="home46-page">
+            <h3>Resources</h3>
+            <li><a href="">FAQs</a></li>
+            <li><a href="">T&Cs</a></li>
+        </div>
+
+    </div>
+    <div id="home47-page">
+        <h5>© 2024-2027 Finja Lending Services. All Rights Reserved.</h5>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12">
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the dropdown element
+            var productDropdown = document.getElementById("productDropdown");
+
+            // Add an event listener for mouseover to open the dropdown
+            productDropdown.addEventListener("mouseover", function() {
+                // Check if the dropdown is not already open
+                if (!productDropdown.classList.contains("show")) {
+                    // Use Bootstrap's dropdown method to manually show the dropdown
+                    var dropdown = new bootstrap.Dropdown(productDropdown);
+                    dropdown.show();
+                }
+            });
+
+            // Add an event listener for mouseout to close the dropdown
+            productDropdown.addEventListener("mouseout", function() {
+                // Use Bootstrap's dropdown method to manually hide the dropdown
+                var dropdown = new bootstrap.Dropdown(productDropdown);
+                dropdown.hide();
+            });
+        });
+    </script>
+
+    <script>
+        var dropdownMenu = document.getElementById("dropdownMenu");
+
+        function openDropdown() {
+            dropdownMenu.classList.add("show");
+        }
+
+        function keepDropdownOpen() {
+            clearTimeout(dropdownTimer);
+        }
+
+        function closeDropdown() {
+            dropdownTimer = setTimeout(function() {
+                dropdownMenu.classList.remove("show");
+            }, 1000);
+        }
+    </script>
+
+
+
+</body>
+
+</html>
